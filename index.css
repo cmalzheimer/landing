@@ -1,0 +1,29 @@
+header img {
+    max-width: 200px;
+}
+
+.ilustrative-img {
+    max-width: 600px;
+}
+
+.cma-button {
+    background-color: #4E126A;
+    color: white;
+}
+
+.form-section-background {
+    background-image: url('assets/images/blob_6-6-6.svg');
+    background-repeat: no-repeat;
+    background-position: 30% 35%;
+    background-size: 300px;
+}
+
+.footer {
+    background-color: #4E126A;
+    color: white;
+}
+
+.footer-copyright {
+    background-color: #2a2a2a;
+    color: white;
+}
