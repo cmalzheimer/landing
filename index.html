@@ -30,18 +30,18 @@
                         <div class="col-12 col-lg-6 my-4">
                             <div class="text-center text-md-left">
                                 <h1 class="mb-4">Recibe una Terapia sin costo</h1>
-                                <p class="mb-3">Recibe una terapia sin costo para su familiar o para un familiarcuidador.</p>
+                                <p class="mb-3">Recibe una terapia sin costo para su familiar o para un familiar cuidador.</p>
                             </div>
                             <div class="text-left mt-3">
-                                <form>
+                                <form id="contactForm">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="formName" placeholder="Nombre completo" >
+                                        <input type="text" class="form-control" id="formName" placeholder="Nombre completo" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="formEmail" placeholder="Correo electrónico">
+                                        <input type="email" class="form-control" id="formEmail" placeholder="Correo electrónico" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="formPhone" placeholder="Teléfono">
+                                        <input type="text" class="form-control" id="formPhone" placeholder="Teléfono" required>
                                     </div>
                                     <div class="form-group mx-4">
                                         <input type="checkbox" class="form-check-input" id="formHasRelativeAlzheimer">
@@ -56,7 +56,9 @@
                                         <label for="formParticipateTherapy" class="ml-2">¿Te gustaría participar en las terapias para familiares?</label>
                                     </div>
                                     <div class="text-center">
-                                        <button type="button" class="btn cma-button btn-lg">Solicitar terapia</button>
+                                        <button id="btnForm" type="submit" class="btn cma-button btn-lg">
+                                            Solicitar terapia
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -99,8 +101,27 @@
                 </div>
             </footer>
         </wrapper>
+        <!-- Modal -->
+        <div class="modal fade" id="resulstModal" tabindex="-1" role="dialog" aria-labelledby="resulstModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="resulstModalTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div id="resulstModalBody" class="modal-body">...</div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn cma-button" data-dismiss="modal">Gracias</button>
+                    </div>
+                </div>
+            </div>
+        </div>                    
         
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
